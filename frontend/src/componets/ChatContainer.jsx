@@ -69,14 +69,14 @@ if(isMessagesLoading){
          />
        )}
        {message.text && <p>{message.text}</p>}
-       {console.log(message.text)}
+      
      </div>      
     </div>
   ))}
   </div>
     <MessageInput/>
     </div>
-  )
-}
+  );
+};
 
 export default ChatContainer

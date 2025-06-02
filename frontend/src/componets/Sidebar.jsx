@@ -12,7 +12,7 @@ const Sidebar = () => {
   const [showOnlineOnly, setShowOnlineOnly] = useState(false)
 
   useEffect(()=>{
-    getUsers()
+    getUsers();
   },[getUsers])
   
 

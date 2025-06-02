@@ -24,8 +24,8 @@ export const signup=async (req,res)=>{
             const newUser=new User({
                 fullName,
                 email,
-                password:hashedPassword
-            })
+                password:hashedPassword,
+            });
         if(newUser){
             // generate jwt token  
             generateToken(newUser._id,res);
@@ -36,7 +36,7 @@ export const signup=async (req,res)=>{
                 fullName:newUser.fullName,
                 email:newUser.email,
                 profilePic:newUser.profilePic
-            })
+            });
         }
 
         else{
