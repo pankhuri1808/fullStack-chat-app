@@ -8,7 +8,7 @@ export const signup=async (req,res)=>{
     // res.send("signup route");
     const {fullName,email,password}=req.body;
     try{
-            if(!password||!email||!email){
+            if(!password||!fullName||!email){
                 return res.status(400).json({message:"All fields are required"});
             }
             if(password.length<6){
@@ -107,7 +107,7 @@ export const updateProfile=async(req,res)=>{
         res.status(200).json(updatedUser);
     }
     catch(error){
-        console.log("error in update profile",error);
+        console.log("error in update profile:",error);
         res.status(500).json({message:"Internal server error"});
     }
 };
@@ -121,4 +121,4 @@ export const checkAuth=(req,res)=>{
         res.status(500).json({message:"Internal Server Error"});
 
     }
-}
+};
